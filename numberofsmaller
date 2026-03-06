@@ -1,0 +1,26 @@
+t,y= map(int, input().split())
+
+arr1 = list(map(int, input().split()))
+
+arr2 = list(map(int, input().split()))
+
+pointer1 = 0
+pointer2 = 0
+count = 0
+
+
+result= []
+
+while pointer2 < y and pointer1 < t:
+    if arr1[pointer1] < arr2[pointer2]:
+        count += 1
+        pointer1 += 1
+       
+    else:
+        pointer2 +=1
+        result.append(count)
+
+for i  in range(pointer2,y,1):
+    result.append(count)
+    
+print(*result)
